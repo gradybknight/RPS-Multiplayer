@@ -5,19 +5,39 @@
     <title>Multiplayer RPS</title>
     <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="assets/app.js"></script>
+    
+
+    <!-- Bootswatch Styling for Improving the Aesthetics -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+
+  <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Style to fix the issue of text extending past panel length -->
+  <style>
+    .panel-body a {
+      word-break: break-all;
+    }
+  </style>
+
 </head>
 
 <body>
-<div class = "container">
-    <div class ="row">
-        <div class="col-lg-12">Rock Paper Scissors</div>
+<!-- copy and paste from ny times example -->
+  <!-- Main Bootstrap Search -->
+  <div class="container">
+    
+    <!-- Jumbotron for Title -->
+    <div class="jumbotron" style="background-color: #20315A ; color: white;">
+      <h1 class="text-center"><strong><i class="fa fa-newspaper-o"></i> Multiplayer Rock Paper Scissors</strong></h1>
     </div>
-    <div class="row">
+
+
+    <div class="row" id="nameEntryDiv">
         <div class="col-lg-4"></div>
         <div class="col-lg-4">
-            <div class="form-group" id="nameEntryDiv">
+                <div class="form-group" id="nameEntryDiv">
                     <label for="Player Name">Name:</label>
                     <input class="form-control" id="enteredName" type="string">
                     <button class="btn btn-primary" id="submitName" type="submit">Start</button>
@@ -25,6 +45,38 @@
         </div>
         <div class="col-lg-4"></div>
     </div>
+
+    <!-- Row for Searching New York Times -->
+    <div class="row">
+      <div class="col-sm-12">
+        <br>
+        <!-- First panel is for handling the search parameters -->
+        <div class = "row">
+            <div class="col-sm-4" id="playerOneChoiceDiv">
+                <div>Player one choice</div>
+                <img src="/assets/images/rock.png" alt="Rock" id="playerOneRock">
+                <img src="/assets/images/papaer.png" alt="Rock" id="playerOnePaper">
+                <img src="/assets/images/scissors.png" alt="Rock" id="playerOneScissors">
+            </div>
+            <div class="col-sm-4" id="resultsDiv">middle</div>
+            <div class="col-sm-4" id="playerTwoChoiceDiv">
+                <div>Player Two choice</div>
+                <img src="/assets/images/rock.png" alt="Rock" id="PlayerTwoRock">
+                <img src="/assets/images/papaer.png" alt="Rock" id="PlayerTwoPaper">
+                <img src="/assets/images/scissors.png" alt="Rock" id="PlayerTwoScissors">
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- This row will handle all of the retrieved articles -->
+    <div class="row">
+      <div class="col-sm-12">
+      </div>
+    </div>
+
+  </div>
+    
 </div>
   
   
